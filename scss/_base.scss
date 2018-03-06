@@ -15,14 +15,25 @@ $icon-layout: horizontal;
         background-position: -10800px;
     }
 }
-body{
 
-    
+body{
+        @media screen and (max-width: $frame-break) {
+            width: 570px;
+            h1{
+                width: 400px;
+                text-align: center;
+                margin-top: 20px;
+            }
+          }
+
     h1{
+        width: 400px;
+        margin: 0 auto;
         font-family: "Karma", serif;
         margin-top: 100px;
         color: black;
         text-align: center;
+        border-bottom: 1px solid;
     }
     .nav{
         font-family: "Karma", serif;
@@ -51,21 +62,57 @@ body{
     }
     
 }
+.all{
+    min-width: 754px;
+}
+
 .frame{
 
-        background: url(../img/frame.jpg) no-repeat center center fixed;
+        background: url(../img/frame.jpg) no-repeat;
         background-size: 570px 500px;
+        width: 570px;
         height: 500px;
-        width: 1200px;
+        margin: 0 auto;
         position: fixed;
         left: 0;
         right: 0; 
         top: 200px;
         z-index: -9999;
+        @media screen and (max-width: $frame-break) {
+            background-size: 570px 500px;
+            margin: 0 auto;
+            background-position: center center;
+            left: 0;
+            right: 0;
+            width: 100%;
+          }
     
 }
 .ship{
+    max-width: 300px;
     margin-top: 220px;
-    display: flex;
-    justify-content: center;
+    position: fixed;
+    top: 350px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
+.description{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @media screen and (max-height: $break-small) {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
