@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Karma');
+$icon-layout: horizontal;
+@import "icon/*.png";
+@include all-icon-sprites;
+
+.icon-animation {
+    width: 300px;
+    height: 225px;
+    background: url("../img/icon-se97b0b502b.png") left center;
+    animation: play 3s steps(36) infinite;
+}
+
+@keyframes play{
+    100%{
+        background-position: -10800px;
+    }
+}
+body{
+
+    
+    h1{
+        font-family: "Karma", serif;
+        margin-top: 100px;
+        color: black;
+        text-align: center;
+    }
+    .nav{
+        font-family: "Karma", serif;
+        a:link{
+            color: black;
+            position: absolute;
+            top: 10px;
+            left: -5px;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 10%;
+            border: solid rgba(255,255,255,1);
+            background: rgba(255,255,255,.6);
+            transition: 1s;
+        }
+        a:hover{
+            background: white;
+            color: black;
+            
+        }
+        a:visited{
+            color: black;
+            
+        }
+    }
+    
+}
+.frame{
+
+        background: url(../img/frame.jpg) no-repeat center center fixed;
+        background-size: 570px 500px;
+        height: 500px;
+        width: 1200px;
+        position: fixed;
+        left: 0;
+        right: 0; 
+        top: 200px;
+        z-index: -9999;
+    
+}
+.ship{
+    margin-top: 220px;
+    display: flex;
+    justify-content: center;
+}
